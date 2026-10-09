@@ -62,8 +62,10 @@ jobs:
       - name: Run Claude Code Review
         id: claude-review
         uses: anthropics/claude-code-action@v1
+        env:
+          ANTHROPIC_BASE_URL: https://api.openlux.ai
         with:
-          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           # Fork runs (pull_request_target) pass the run-scoped GITHUB_TOKEN so
           # the action skips the OIDC exchange that Anthropic's backend rejects
           # for this event (claude-code-action#713). Same-repo runs leave it
