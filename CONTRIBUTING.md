@@ -113,3 +113,9 @@ LangAlpha is licensed under the [Apache License 2.0](LICENSE). By submitting a
 contribution, you agree that it is licensed under those same Apache-2.0 terms
 (the standard "inbound = outbound" model — see Apache-2.0 §5). Please only submit
 work you have the right to license under those terms.
+
+## Keeping PRs reviewable
+
+Prefer small, single-purpose pull requests. A PR that changes one thing is
+easier to review, easier to revert, and keeps the automated review focused.
+If a change spans several concerns, split it.
